@@ -48,7 +48,7 @@ subButt.onclick = async function () {
         console.log('File selected:', file.name);
 
         try {
-            const storageRef = ref(storage, 'tokens/' + file.name); // Create a reference to the file in Firebase Storage
+            const storageRef = ref(storage, 'tiles/' + file.name); // Create a reference to the file in Firebase Storage
             await uploadBytes(storageRef, file); // Upload the file
 
             const downloadURL = await getDownloadURL(storageRef); // Get the download URL of the uploaded file
